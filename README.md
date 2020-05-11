@@ -13,6 +13,6 @@ wanted to learn more on how to visualize simulations in general and practice mak
 - add ability to set seed
 - add the ability to save current state to pick up where you left off
 - determine if slowdown over time is due to a memory leak, graphics rendering, or computations
-    > if memory leak --> fix
-    > if graphics --> optimize
-    > if computations --> add threading
+    -- if memory leak --> fix
+    -- if graphics --> optimize
+    -- if computations --> add threading
