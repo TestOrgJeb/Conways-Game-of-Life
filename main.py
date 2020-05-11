@@ -13,7 +13,7 @@ from kivy.config import Config
 from kivy.clock import Clock
 from kivy.graphics import Rectangle, Color, Line
 from kivy.core.window import Window
-from Untitled import Environment
+from environment import Environment
 
 #TODO add the ability to change probability of initial cell condition
 #TODO add ability to set seed
