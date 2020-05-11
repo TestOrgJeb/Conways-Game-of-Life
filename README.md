@@ -18,3 +18,5 @@ wanted to learn more on how to visualize simulations in general and practice mak
     -- if memory leak --> fix
     -- if graphics --> optimize
     -- if computations --> add threading
+- Long Term 
+    -- Make it so you can paint the initial conditions on the grid
