@@ -70,6 +70,7 @@ class MainScreen(FloatLayout):
             self.start_butt.disabled = True
             self.step_butt.disabled = True
             self.stop_butt.disabled = False
+            self.change_speed(self.speed_select.text)
             self.step = Clock.schedule_interval(self.continuous_run, self.tick_time)
             
         else:
