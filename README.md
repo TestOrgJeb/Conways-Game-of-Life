@@ -4,6 +4,8 @@ An app to explore Conway's Game of Life
 # Overview
 I wanted to create an app where I could play around with Conway's Game of Life (CGoL) and learn more about cellular automata.
 
+![](cgol.gif)
+
 # Learning Objective
 Using Kivy the goal was to create a dashboard where I could set the grid size, initial conditions, etc for CGoL. I also
 wanted to learn more on how to visualize simulations in general and practice making use of the MVC architecture. 
