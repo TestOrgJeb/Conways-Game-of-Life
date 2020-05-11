@@ -1,0 +1,129 @@
+
+<MainScreen>:
+    header:_header
+    grid_width:input_width
+    grid_height:input_height
+    submit_width:accept_width
+    submit_height:accept_height
+    step_butt:step_button
+    start_butt:start_button
+    stop_butt:stop_button
+    reset_butt:reset_button
+    pool:_pool
+    FloatLayout:
+        Label:
+            id: _header
+            text: "Conway's Game of Life"
+            font_size: 26
+            size_hint: .2,.1
+            pos_hint: {'x':.1, 'y':.9}
+        Label:
+            id: "Grid_Width_Setting"
+            text: 'Width'
+            font_size: 20
+            pos_hint: {'x':.1, 'y':.8}
+            size_hint: .4, .1
+            text_size: self.size
+            halign: 'left'
+            valign: 'center'
+        TextInput:
+            id: input_width
+            pos_hint: {'x':.15, 'y':.8}
+            size_hint: .1, .06
+            multiline: False
+            readonly: False
+        Button:
+            id: accept_width
+            text: 'Submit'
+            pos_hint: {'x':.25,'y':.8}
+            size_hint: .1, .06
+            on_release: root.set_w()
+            disabled: False
+        Label:
+            id: "Grid_Height_Setting"
+            text: 'Height'
+            font_size: 20
+            pos_hint: {'x':.1, 'y':.7}
+            size_hint: .4, .1
+            text_size: self.size
+            halign: 'left'
+            valign: 'center'
+        TextInput:
+            id: input_height
+            pos_hint: {'x':.15, 'y':.7}
+            size_hint: .1, .06
+            multiline: False
+            readonly: False
+        Button:
+            id: accept_height
+            text: 'Submit'
+            pos_hint: {'x':.25,'y':.7}
+            size_hint: .1, .06
+            on_release: root.set_h()
+            disabled: False
+        Label:
+            id: "Simulation_Speed"
+            text: 'Speed'
+            font_size: 20
+            pos_hint: {'x':.1, 'y':.6}
+            size_hint: .4, .1
+            text_size: self.size
+            halign: 'left'
+            valign: 'center'
+
+        Button:
+            id: step_button
+            text: 'STEP'
+            pos_hint: {'x':.1,'y':.05}
+            size_hint: .2, .06
+            on_release: root.step_once()
+            disabled: True
+        Button:
+            id: start_button
+            text: 'START'
+            pos_hint: {'x':.3,'y':.05}
+            size_hint: .2, .06
+            on_release: root.start_game()
+            disabled: False
+        Button:
+            id: stop_button
+            text: 'STOP'
+            pos_hint: {'x':.5,'y':.05}
+            size_hint: .2, .06
+            on_release: root.stop_game()
+            disabled: False
+        Button:
+            id: reset_button
+            text: 'RESET'
+            pos_hint: {'x':.7,'y':.05}
+            size_hint: .2, .06
+            on_release: root.reset_game()
+            disabled: False
+
+    FloatLayout:
+        id:_pool
+        pos_hint:{'x': .4,'y':.13}
+        size_hint: .47, None
+        size: self.width, self.width
+        canvas.before:
+            Color:
+                rgba: 255/255,255/255,255/255,1
+            Rectangle:
+                size:self.size
+                pos:self.pos
+<SpeedDropDown>:   
+    Button:
+        text: 'Slow'
+        size_hint_y: None
+        height: 44
+        on_release: root.select('Slow')
+    Button:
+        text: 'Normal'
+        size_hint_y: None
+        height: 44
+        on_release: root.select('Normal')
+    Button:
+        text: 'Fast'
+        size_hint_y: None
+        height: 44
+        on_release: root.select('Fast')
